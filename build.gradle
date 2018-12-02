@@ -17,7 +17,13 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'br.com.quintoandar'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+
+sourceCompatibility = 11.0
+targetCompatibility = 11.0
+
+wrapper {
+	gradleVersion = '4.10.2'
+}
 
 repositories {
 	mavenCentral()
