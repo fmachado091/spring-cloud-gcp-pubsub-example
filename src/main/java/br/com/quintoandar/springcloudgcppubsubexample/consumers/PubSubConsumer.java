@@ -2,10 +2,16 @@ package br.com.quintoandar.springcloudgcppubsubexample.consumers;
 
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
 
-public interface PubSubConsumer {
+import java.util.function.Consumer;
 
-    String subscription();
+public abstract class PubSubConsumer {
 
-    void consume(BasicAcknowledgeablePubsubMessage acknowledgeablePubsubMessage);
+    public abstract String subscription();
+
+    protected abstract void consume(BasicAcknowledgeablePubsubMessage acknowledgeablePubsubMessage);
+
+    public Consumer<BasicAcknowledgeablePubsubMessage> consumer() {
+        return this::consume;
+    }
 
 }

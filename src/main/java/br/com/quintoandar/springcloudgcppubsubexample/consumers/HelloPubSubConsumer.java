@@ -7,7 +7,7 @@ import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMe
 import org.springframework.stereotype.Service;
 
 @Service
-public class HelloPubSubConsumer implements PubSubConsumer {
+public class HelloPubSubConsumer extends PubSubConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloPubSubConsumer.class);
 
@@ -17,7 +17,7 @@ public class HelloPubSubConsumer implements PubSubConsumer {
     }
 
     @Override
-    public void consume(BasicAcknowledgeablePubsubMessage acknowledgeablePubsubMessage) {
+    protected void consume(BasicAcknowledgeablePubsubMessage acknowledgeablePubsubMessage) {
         PubsubMessage message = acknowledgeablePubsubMessage.getPubsubMessage();
         LOGGER.info("message received: " + message.getData().toStringUtf8());
         acknowledgeablePubsubMessage.ack();

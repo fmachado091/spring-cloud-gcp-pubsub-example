@@ -15,18 +15,19 @@ public class HelloPubSubSubscriberConfig {
 
     private final PubSubTemplate pubSubTemplate;
 
-    private final HelloPubSubConsumer consumer;
+    private final HelloPubSubConsumer helloPubSubConsumer;
 
     @Autowired
-    public HelloPubSubSubscriberConfig(PubSubTemplate pubSubTemplate, HelloPubSubConsumer consumer) {
+    public HelloPubSubSubscriberConfig(PubSubTemplate pubSubTemplate, HelloPubSubConsumer helloPubSubConsumer) {
         this.pubSubTemplate = pubSubTemplate;
-        this.consumer = consumer;
+        this.helloPubSubConsumer = helloPubSubConsumer;
     }
 
     @EventListener(ApplicationReadyEvent.class)
     public void subscribe() {
-        LOGGER.info("Subscribing {} to {}", consumer.getClass().getSimpleName(), consumer.subscription());
-        pubSubTemplate.subscribe(consumer.subscription(), consumer::consume);
+        LOGGER.info("Subscribing {} to {}", helloPubSubConsumer.getClass().getSimpleName(),
+                helloPubSubConsumer.subscription());
+        pubSubTemplate.subscribe(helloPubSubConsumer.subscription(), helloPubSubConsumer.consumer());
     }
 
 }
