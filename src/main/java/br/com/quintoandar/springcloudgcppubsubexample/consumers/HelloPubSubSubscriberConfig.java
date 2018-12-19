@@ -23,6 +23,10 @@ public class HelloPubSubSubscriberConfig {
         this.helloPubSubConsumer = helloPubSubConsumer;
     }
 
+    /**
+     * It's called only when the application is ready to receive requests.
+     * Passes a consumer implementation when subscribing to a Pub/Sub topic.
+     */
     @EventListener(ApplicationReadyEvent.class)
     public void subscribe() {
         LOGGER.info("Subscribing {} to {}", helloPubSubConsumer.getClass().getSimpleName(),

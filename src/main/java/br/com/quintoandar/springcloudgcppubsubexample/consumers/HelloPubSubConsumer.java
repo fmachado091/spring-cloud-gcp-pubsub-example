@@ -18,8 +18,13 @@ public class HelloPubSubConsumer extends PubSubConsumer {
 
     @Override
     protected void consume(BasicAcknowledgeablePubsubMessage acknowledgeablePubsubMessage) {
+        // extract wrapped message
         PubsubMessage message = acknowledgeablePubsubMessage.getPubsubMessage();
+
+        // process message
         LOGGER.info("message received: " + message.getData().toStringUtf8());
+
+        // acknowledge that message was received
         acknowledgeablePubsubMessage.ack();
     }
 
