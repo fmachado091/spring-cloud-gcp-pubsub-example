@@ -1,5 +1,6 @@
-package br.com.quintoandar.springcloudgcppubsubexample.consumers;
+package br.com.quintoandar.springcloudgcppubsubexample.subscribers.config;
 
+import br.com.quintoandar.springcloudgcppubsubexample.subscribers.consumers.HelloPubSubConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package br.com.quintoandar.springcloudgcppubsubexample.consumers;
+package br.com.quintoandar.springcloudgcppubsubexample.subscribers.consumers;
 
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
 

@@ -1,4 +1,4 @@
-package br.com.quintoandar.springcloudgcppubsubexample.consumers;
+package br.com.quintoandar.springcloudgcppubsubexample.subscribers.consumers;
 
 import com.google.pubsub.v1.PubsubMessage;
 import org.slf4j.Logger;
