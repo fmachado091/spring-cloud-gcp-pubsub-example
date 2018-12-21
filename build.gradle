@@ -34,6 +34,8 @@ ext['springCloudVersion'] = 'Greenwich.M3'
 
 dependencies {
     implementation('org.springframework.cloud:spring-cloud-gcp-starter-pubsub')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
