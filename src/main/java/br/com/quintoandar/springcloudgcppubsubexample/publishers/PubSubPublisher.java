@@ -17,7 +17,7 @@ public abstract class PubSubPublisher {
     protected abstract String topic();
 
     public void publish(String message) {
-        LOGGER.info("Publishing to topic [{}]. Message: [{}]", topic(), message);
+        LOGGER.info("publishing to topic [{}], message: [{}]", topic(), message);
         pubSubTemplate.publish(topic(), message);
     }
 
