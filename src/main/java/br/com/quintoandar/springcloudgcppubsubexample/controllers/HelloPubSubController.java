@@ -24,7 +24,7 @@ public class HelloPubSubController {
 
     @PostMapping("/publish")
     public void publish(@RequestBody String message) {
-        LOGGER.info("Received a POST at /hello/publish with message=[{}]", message);
+        LOGGER.info("received a POST at /hello/publish with message=[{}]", message);
         publisher.publish(message);
     }
 
