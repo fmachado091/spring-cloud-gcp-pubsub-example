@@ -4,9 +4,9 @@ import com.google.pubsub.v1.PubsubMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class HelloPubSubConsumer extends PubSubConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloPubSubConsumer.class);
