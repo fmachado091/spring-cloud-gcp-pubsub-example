@@ -1,7 +1,8 @@
 .gradle
+.vscode
 /build/
 !gradle/wrapper/gradle-wrapper.jar
-
+*key.json
 ### STS ###
 .apt_generated
 .classpath
