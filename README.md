@@ -17,3 +17,6 @@ gradle wrapper
 - ./gradlew clean build
 - ./gradlew bootRun
 - Refer the articles above for more details
+```
+curl -X POST   http://localhost:8080/hello/publish?[1-30]   -H 'Content-Type: text/plain'   -d 'Hello, Pub/Sub'
+```

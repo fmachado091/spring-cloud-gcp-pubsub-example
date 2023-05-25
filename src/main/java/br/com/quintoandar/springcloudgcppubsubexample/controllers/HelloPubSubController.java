@@ -23,7 +23,12 @@ public class HelloPubSubController {
     }
 
     @PostMapping("/publish")
-    public void publish(@RequestBody String message) {
+    public void publish(@RequestBody String message) {        
+        LOGGER.trace("A TRACE Message");
+        LOGGER.debug("A DEBUG Message");
+        LOGGER.info("An INFO Message");
+        LOGGER.warn("A WARN Message");
+        LOGGER.error("An ERROR Message");
         LOGGER.info("received a POST at /hello/publish with message=[{}]", message);
         publisher.publish(message);
     }

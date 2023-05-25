@@ -1,6 +1,7 @@
 .gradle
 .vscode
 /build/
+/logs/
 !gradle/wrapper/gradle-wrapper.jar
 *key.json
 ### STS ###
