@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.1.RELEASE'
+        springBootVersion = '2.7.12'
     }
     repositories {
         mavenCentral()
@@ -22,7 +22,7 @@ sourceCompatibility = 11.0
 targetCompatibility = 11.0
 
 wrapper {
-    gradleVersion = '4.10.2'
+    gradleVersion = '7.3.2'
 }
 
 repositories {
@@ -37,6 +37,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('junit:junit:4.12')
 }
 
 dependencyManagement {

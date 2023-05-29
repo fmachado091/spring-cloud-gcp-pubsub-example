@@ -5,15 +5,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
 import org.springframework.stereotype.Component;
-
+import org.springframework.beans.factory.annotation.Value;
 @Component
 public class HelloPubSubConsumer extends PubSubConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloPubSubConsumer.class);
 
+    @Value("${gcp.subscription.name}")
+    private String subscription;
+
     @Override
     public String subscription() {
-        return "hello-pubsub-subscription";
+        return subscription;
     }
 
     @Override
